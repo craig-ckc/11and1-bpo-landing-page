@@ -41,24 +41,6 @@ export function loadingAnimation() {
         }, "-=1")
 };
 
-// export function animateNav() {
-//     const masterTimeline = gsap.timeline({
-//         ease: "none",
-//         scrollTrigger: {
-//             trigger: ".navbar_section",
-//             start: "top -20%",
-//             end: "top -40%",
-//             scrub: true,
-//         },
-//     });
-
-//     masterTimeline.to(".navbar_logo", {
-//         width: "5rem",
-//     }).to(".navbar_right", {
-//         paddingTop: "1.5rem",
-//     }, 0);
-// }
-
 export function animateTeam() {
     // const firstChild = document.querySelector(".team_grid .team_image:nth-child(1)");
 
@@ -109,7 +91,7 @@ export function animationLoad() {
         // z: -200,
         duration: 1,
         opacity: 0,
-        webkitFilter:"blur(10px)",
+        webkitFilter: "blur(10px)",
         ease: "cubic-bezier(.075, .82, .165, 1)",
         stagger: {
             each: 0.3,

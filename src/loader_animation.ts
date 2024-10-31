@@ -51,7 +51,7 @@ export function startLoader() {
         stagger: {
             amount: 0.1
         }
-    }, "+=0.5").to(bars, {
+    }, "+=1.2").to(bars, {
         duration: 0.5,
         height: 0,
         ease: "cubic-bezier(0.16, 1, 0.3, 1)",
@@ -83,29 +83,19 @@ export function startLoader() {
     }, "-=0.8");
 }
 
+export function animateNav() {
+    const masterTimeline = gsap.timeline({
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".navbar_section",
+            start: "top -20%",
+            end: "top -40%",
+            scrub: true,
+        },
+    });
 
-export function animateWords() {
-    // const word1 = document.querySelector<HTMLElement>(".people_caption-row:nth-child(1) .people_caption_text:nth-child(1)");
-    // const word2 = document.querySelector<HTMLElement>(".people_caption-row:nth-child(2) .people_caption_text:nth-child(1)");
 
-    // const word3 = document.querySelector<HTMLElement>(".people_caption-row:nth-child(1) .people_caption_text:nth-child(2)");
-    // const word4 = document.querySelector<HTMLElement>(".people_caption-row:nth-child(2) .people_caption_text:nth-child(2)");
-
-
-    // const loop = gsap.timeline({ repeat: -1, repeatDelay: 1.2 });
-
-    // loop.to([word1, word2], {
-    //     y: "-110%",
-    //     stagger: { amount: 0.2}
-    // }).to([word3, word4], {
-    //     y: "-110%",
-    //     stagger: { amount: 0.2 }
-    // }, "-=0.8")
-    // .from([word1, word2], {
-    //     y: "110%",
-    //     stagger: { amount: 0.2 }
-    // }, "+=1").to([word3, word4], {
-    //     y: "-220%",
-    //     stagger: { amount: 0.2 }
-    // }, "-=0.8");
+    masterTimeline.to(":root", {
+        "--util--nav-logo": "4rem"
+    })
 }

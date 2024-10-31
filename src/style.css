@@ -1,78 +1,22 @@
-.people_caption {
-    .people_caption-row {
-        .people_caption_text {
-            position: relative;
-            display: inline-block;
-            animation-iteration-count: infinite;
-            animation-duration: 6s;
-            animation-timing-function: easeInOutCirc;
-            animation-fill-mode: fowards;
-        }
-
-        &:nth-child(2) .people_caption_text {
-            animation-delay: 0.1s;
-        }
+.people_footnote-group {
+    .people_caption_text {
+        position: relative;
+        display: inline-block;
+        animation-iteration-count: infinite;
+        animation-duration: 6s;
+        animation-timing-function: easeInOutCirc;
+        animation-fill-mode: fowards;
     }
 
-    .people_caption-row .people_caption_text {
+    .people_caption_text:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    &:nth-child(1) .people_caption_text {
         animation-name: slide-anim-01;
     }
 
-    .people_caption-row:nth-child(2) .people_caption_text {
+    &:nth-child(2) .people_caption_text {
         animation-name: slide-anim-02;
-    }
-}
-
-@keyframes slide-anim-01 {
-    0% {
-        transform: translateY(120%);
-        /* Start 100% below */
-    }
-
-    10% {
-        transform: translateY(0%);
-        /* Move to original position */
-    }
-
-    40% {
-        transform: translateY(0%);
-        /* Stay at original position */
-    }
-
-    50% {
-        transform: translateY(-120%);
-        /* Move 100% above */
-    }
-
-    100% {
-        transform: translateY(-120%);
-        /* Move 100% above */
-    }
-}
-
-@keyframes slide-anim-02 {
-    0% {
-        transform: translateY(120%);
-        /* Start 100% below */
-    }
-
-    50% {
-        transform: translateY(120%);
-        /* Move 100% above */
-    }
-
-    60% {
-        transform: translateY(0%);
-        /* Move to original position */
-    }
-
-    90% {
-        transform: translateY(0%);
-        /* Stay at original position */
-    }
-
-    100% {
-        transform: translateY(-120%);
-        /* Move 100% above */
     }
 }
